@@ -8,7 +8,7 @@ RSpec.describe Radar, ".status_for" do
       stub_request(:get, "http://services.faa.gov/airport/status/JFK").
         with(:headers => {"Accept" => "application/json"}).
         to_return(File.new(fixture("jfk")))
-    end
+    en
 
     subject(:status) do
       Radar.status_for("JFK")
